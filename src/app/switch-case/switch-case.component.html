@@ -1,0 +1,13 @@
+<div [ngSwitch]="escolha" class="container">
+  <p *ngSwitchDefault>Escolha um curso</p>
+  <p *ngSwitchCase="'JavaScript'">{{ escolhido }} {{ escolha }}</p>
+  <p *ngSwitchCase="'TypeScript'">{{ escolhido }} {{ escolha }}</p>
+  <p *ngSwitchCase="'NodeJS'">{{ escolhido }} {{ escolha }}</p>
+  <p *ngSwitchCase="'Angular'">{{ escolhido }} {{ escolha }}</p>
+  <p *ngSwitchCase="'NativeScript'">{{ escolhido }} {{ escolha }}</p>
+  <span [class.ativo]="escolha == curso" [hidden]="escolha != curso" *ngFor="let curso of cursos">{{ curso }}</span>
+  <br/>
+  <select name="escolhas" id="" (change)="escolhaCurso($event.target.value)">
+      <option *ngFor="let curso of cursos" value="{{ curso }}">{{ curso }}</option>
+  </select>
+</div>
