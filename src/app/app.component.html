@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<h3 appCentralizar>{{ titulo }}</h3>
 
+<app-ng-class></app-ng-class>
+<hr/>
 <app-ng-for [listaBtn]="lista2"></app-ng-for>
 <hr/>
-<app-switch-case (change)="transfLista($event.target)" (lista)="buildLista($event)"></app-switch-case>
+<app-switch-case appCentralizar (lista)="buildLista($event)"></app-switch-case>
 <hr/>
 <app-ng-if></app-ng-if>
 <router-outlet></router-outlet>

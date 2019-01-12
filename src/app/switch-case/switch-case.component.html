@@ -1,4 +1,4 @@
-<div [ngSwitch]="escolha" class="container">
+<div appCentralizar [ngSwitch]="escolha" class="container">
   <p *ngSwitchDefault>Escolha um curso</p>
   <p *ngSwitchCase="'JavaScript'">{{ escolhido }} {{ escolha }}</p>
   <p *ngSwitchCase="'TypeScript'">{{ escolhido }} {{ escolha }}</p>

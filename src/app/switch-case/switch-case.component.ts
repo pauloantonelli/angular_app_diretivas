@@ -1,14 +1,14 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, AfterContentInit } from '@angular/core';
 
 @Component({
   selector: 'app-switch-case',
   templateUrl: './switch-case.component.html',
   styleUrls: ['./switch-case.component.scss']
 })
-export class SwitchCaseComponent implements OnInit {
+export class SwitchCaseComponent implements AfterContentInit {
   public escolhido = 'Curso Escolhido: ';
   public escolha: string;
-  public cursos = ['', 'JavaScript', 'TypeScript', 'NodeJS', 'Angular', 'NativeScript'];
+  public cursos = ['', 'JavaScript', 'TypeScript', 'NodeJS', 'Angular', 'NativeScript', 'MongoDB'];
   @Output() lista = new EventEmitter();
   constructor() {  }
   exportacaoLista() {
@@ -19,7 +19,7 @@ export class SwitchCaseComponent implements OnInit {
   escolhaCurso(curso) {
     this.escolha = curso;
   }
-  ngOnInit(): void {
+  ngAfterContentInit(): void {
     this.exportacaoLista();
   }
 }

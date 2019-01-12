@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     CentralizarDirective,
     NgIfComponent,
     SwitchCaseComponent,
-    NgForComponent
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,

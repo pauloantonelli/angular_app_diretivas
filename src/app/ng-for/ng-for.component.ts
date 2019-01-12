@@ -1,18 +1,19 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-ng-for',
   templateUrl: './ng-for.component.html',
   styleUrls: ['./ng-for.component.scss']
 })
-export class NgForComponent implements OnChanges {
-  @Input() listaBtn: [];
+export class NgForComponent implements AfterContentChecked {
+  @Input() listaBtn: [] = [];
   public lista: [] = [];
   constructor() { }
   recepcaoListaCursos(evento) {
-    this.lista = this.listaBtn;
+    this.lista = evento;
+    console.log(this.lista);
   }
-  ngOnChanges() {
+  ngAfterContentChecked(): void {
     this.recepcaoListaCursos(this.listaBtn);
   }
 }

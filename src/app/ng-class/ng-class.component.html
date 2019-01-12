@@ -1,0 +1,20 @@
+<div appCentralizar>
+  <!--class binding classico-->
+  <i class="glyphicon glyphicon-minus"
+  [class.glyphicon-star-empty]="!click"
+  [class.glyphicon-star]="click"
+  (click)="mudaClick()"
+  ></i>
+</div>
+
+<div appCentralizar>
+  <!--diretiva ngclass-->
+  <i *ngFor="let estrela of countEstrelas, let i = index"
+  class="glyphicon"
+  [ngClass]="{
+    'glyphicon-star-empty': clickado[i] === false,
+    'glyphicon-star': clickado[i] === true
+  }"
+  (click)="clickEstrela(estrela, i)">{{estrela}}</i>
+</div>
+<button (click)="reset()">zerar</button>

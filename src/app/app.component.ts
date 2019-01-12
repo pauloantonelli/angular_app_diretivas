@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  lista2: [];
-  transfLista(evento) {
-    this.lista2 = evento;
+  public titulo = 'Aplicativo das diretivas';
+  lista2: any [] = [];
+  buildLista(evento) {
+    for (let i = 0; i < evento.listaCurso.length; i ++) {
+      this.lista2[i] = evento.listaCurso[i];
+    console.log(evento.listaCurso[i]);
+    }
     console.log(this.lista2);
   }
-  buildLista(evento) {
-    console.log(evento);
-  }
   constructor() {
-    this.buildLista();
   }
   ngOnInit() {
 
