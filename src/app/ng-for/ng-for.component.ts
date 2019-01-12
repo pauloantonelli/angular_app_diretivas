@@ -11,7 +11,6 @@ export class NgForComponent implements AfterContentChecked {
   constructor() { }
   recepcaoListaCursos(evento) {
     this.lista = evento;
-    console.log(this.lista);
   }
   ngAfterContentChecked(): void {
     this.recepcaoListaCursos(this.listaBtn);

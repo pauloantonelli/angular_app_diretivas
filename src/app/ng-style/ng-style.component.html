@@ -1,0 +1,46 @@
+<div appCentralizar>
+  <p>Style Binding Classico</p>
+  <br />
+  <input type="text" [(ngModel)]="tamanhoFonte" />
+  <p [style.fontSize]="tamanhoFonte + 'px'">
+    Tamanho da fonte alterada: {{ tamanhoFonte }}
+  </p>
+  <button
+    [style.backgroundColor]="_corFundo ? 'blue' : 'red'"
+    (click)="corFundo()"
+  >
+    Trocar cor de fundo
+  </button>
+  <button [style.color]="_cor ? 'pink' : 'brown'" (click)="cor()">
+    Trocar cor
+  </button>
+  <button [style.fontWeight]="_peso ? 'bold' : 'normal'" (click)="pesofonte()">
+    Trocar peso da fonte
+  </button>
+</div>
+<br />
+<div appCentralizar>
+  <p>Diretiva: ngStyle</p>
+  <div>
+    <input type="text" [(ngModel)]="fonteSizes" />
+    <p
+      [ngStyle]="{
+        backgroundColor: corInput ? 'green' : 'orange',
+        color: corSlide ? 'yellow' : 'white',
+        fontWeight: fontePeso ? 'bolder' : 'normal',
+        fontSize: fonteSizes + 'px'
+      }"
+    >
+      Texto exemplo ng-style
+    </p>
+  </div>
+  <mat-slide-toggle
+    [ngStyle]="{
+      backgroundColor: corInput ? 'green' : 'orange',
+      color: corSlide ? 'yellow' : 'white',
+      fontWeight: fontePeso ? 'bolder' : 'normal'
+    }"
+    (change)="corSlider()"
+    >Mudar cor</mat-slide-toggle
+  >
+</div>

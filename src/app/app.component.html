@@ -1,11 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h3 appCentralizar>{{ titulo }}</h3>
 
+<app-ng-content>
+  <p
+    class="titulo"
+    [ngStyle]="{
+      fontWeight: 'bold',
+      fontSize: '1.2rem'
+    }"
+  >
+    Imagem enviado através do template pai
+  </p>
+  Conteudo ignorado pelo angular por que esta em um ng-content c/ class definidas mas nao tem class
+  <img class="ilustrativo" src="../assets/nodejs.jpeg" alt="nodejs-logo" width="200px" />
+</app-ng-content>
+<hr />
+<app-elvis-operator></app-elvis-operator>
+<hr />
+<app-ng-style></app-ng-style>
+<hr />
 <app-ng-class></app-ng-class>
-<hr/>
+<hr />
 <app-ng-for [listaBtn]="lista2"></app-ng-for>
-<hr/>
+<hr />
 <app-switch-case appCentralizar (lista)="buildLista($event)"></app-switch-case>
-<hr/>
+<hr />
 <app-ng-if></app-ng-if>
 <router-outlet></router-outlet>

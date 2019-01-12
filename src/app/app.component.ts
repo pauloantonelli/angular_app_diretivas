@@ -11,9 +11,7 @@ export class AppComponent implements OnInit {
   buildLista(evento) {
     for (let i = 0; i < evento.listaCurso.length; i ++) {
       this.lista2[i] = evento.listaCurso[i];
-    console.log(evento.listaCurso[i]);
     }
-    console.log(this.lista2);
   }
   constructor() {
   }
