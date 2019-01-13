@@ -1,6 +1,6 @@
 <div appCentralizar [ngSwitch]="escolha" class="container">
-  <h5>Diretiva: ng-switch / ng-switch-case / ng-switch-default</h5>
-  <p *ngSwitchDefault>Escolha um curso</p>
+  <h5 appCentralizar appTitulo>Diretiva: ng-switch / ng-switch-case / ng-switch-default</h5>
+  <p appTitulo *ngSwitchDefault>Escolha um curso</p>
   <p *ngSwitchCase="'JavaScript'">{{ escolhido }} {{ escolha }}</p>
   <p *ngSwitchCase="'TypeScript'">{{ escolhido }} {{ escolha }}</p>
   <p *ngSwitchCase="'NodeJS'">{{ escolhido }} {{ escolha }}</p>

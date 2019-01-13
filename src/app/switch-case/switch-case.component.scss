@@ -3,21 +3,6 @@
   flex-direction: column;
 }
 
-.container > * {
-  width: 100%;
-}
-
-.container p {
-  margin-bottom: 20px;
-}
-
-.container p > * {
-  margin: 5px 0;
-}
-
-.container {
-  margin: 0 5px;
-}
 .ativo {
   background-color: chocolate;
 }
