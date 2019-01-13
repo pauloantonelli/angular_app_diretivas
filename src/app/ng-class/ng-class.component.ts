@@ -17,9 +17,7 @@ export class NgClassComponent {
 
   reset() {
     for (let i = 0; i < this.clickado.length; i++) {
-      console.log(i);
       this.clickado[i] = false;
-      console.log(this.clickado[i]);
     }
   }
   clickEstrela(estrela: number, num: number) {

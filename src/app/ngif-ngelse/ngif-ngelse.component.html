@@ -1,0 +1,10 @@
+<div appCentralizar>
+  <p appTitulo>Diretiva Personalizada: Ng-if / Ng-else</p>
+  <div *ngIf="cursos; else blocoElse">
+    <p>Conteudo exibido se for true</p>
+  </div>
+  <ng-template #blocoElse>
+    <p>Conteudo exibido se for false</p>
+  </ng-template>
+  <button (click)="trocarValor()">{{ cursos ? 'trocar valor : false' : 'trocar valor : true'}}</button>
+</div>

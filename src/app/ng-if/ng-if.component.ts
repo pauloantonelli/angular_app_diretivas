@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-if.component.scss']
 })
 export class NgIfComponent {
-  public title = 'App Diretivas';
+  public title = 'ng-if';
   public mostrarLogo = true;
 
   constructor() {}

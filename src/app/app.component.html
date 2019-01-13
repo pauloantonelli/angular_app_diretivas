@@ -1,7 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h3 appCentralizar>{{ titulo }}</h3>
+<h3 appTitulo appCentralizar>{{ titulo }}</h3>
 
+<hr/>
+<app-ngif-ngelse></app-ngif-ngelse>
+<hr/>
+<app-input-e-property-binding></app-input-e-property-binding>
+<hr/>
+<app-host-binding></app-host-binding>
+<hr/>
+<app-host-listener></app-host-listener>
+<hr/>
+<app-elementref-render2-diretiva></app-elementref-render2-diretiva>
+<hr/>
 <app-ng-content>
+    <app-ng-for class="titulo" [listaBtn]="lista2"></app-ng-for>
   <p
     class="titulo"
     [ngStyle]="{

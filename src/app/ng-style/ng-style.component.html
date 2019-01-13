@@ -1,6 +1,7 @@
 <div appCentralizar>
-  <p>Style Binding Classico</p>
+  <p [style.fontWeight]="'bold'">Diretiva: ng-style</p>
   <br />
+  <p>Style Binding Classico</p>
   <input type="text" [(ngModel)]="tamanhoFonte" />
   <p [style.fontSize]="tamanhoFonte + 'px'">
     Tamanho da fonte alterada: {{ tamanhoFonte }}
@@ -20,7 +21,7 @@
 </div>
 <br />
 <div appCentralizar>
-  <p>Diretiva: ngStyle</p>
+  <p [style.fontWeight]="'bold'">Diretiva: ngStyle</p>
   <div>
     <input type="text" [(ngModel)]="fonteSizes" />
     <p

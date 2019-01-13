@@ -1,0 +1,17 @@
+<div appCentralizar>
+  <p [ngStyle]="{
+    'fontWeight' : 'bold'
+  }"
+  >Diretiva personalizada: elementRef + Renderer2</p>
+  <p>metodo recomendado pela documentação</p>
+  <span appRenderer2>Texto modificado pela diretiva personalizada</span>
+</div>
+<br/>
+<div appCentralizar>
+  <p [ngStyle]="{
+    'fontWeight' : 'bold'
+  }">Diretiva personalizada: elementRef</p>
+  <p>essa classe elementRef não deve ser usada assim sozinha, <br/>
+    mas deve ser usada com Renderer2 para evitar ataques de script injection</p>
+  <span appElementRef>Texto modificado pelo elementRef</span>
+</div>

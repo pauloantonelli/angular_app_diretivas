@@ -17,6 +17,18 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
+import { ElementrefRender2DiretivaComponent } from './elementref-render2-diretiva/elementref-render2-diretiva.component';
+import { ElementRefDirective } from './shared/element-ref.directive';
+import { Renderer2Directive } from './shared/renderer2.directive';
+import { HostListenerComponent } from './host-listener/host-listener.component';
+import { HostListenerDirective } from './shared/host-listener.directive';
+import { TituloDirective } from './shared/titulo.directive';
+import { HostBindingComponent } from './host-binding/host-binding.component';
+import { HostBindingDirective } from './shared/host-binding.directive';
+import { HostBindingExtraDirective } from './shared/host-binding-extra.directive';
+import { InputEPropertyBindingComponent } from './input-e-property-binding/input-e-property-binding.component';
+import { InputEPropertyBindingDirective } from './shared/input-e-property-binding.directive';
+import { NgifNgelseComponent } from './ngif-ngelse/ngif-ngelse.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +40,19 @@ import { NgContentComponent } from './ng-content/ng-content.component';
     NgClassComponent,
     NgStyleComponent,
     ElvisOperatorComponent,
-    NgContentComponent
+    NgContentComponent,
+    ElementrefRender2DiretivaComponent,
+    ElementRefDirective,
+    Renderer2Directive,
+    HostListenerComponent,
+    HostListenerDirective,
+    TituloDirective,
+    HostBindingComponent,
+    HostBindingDirective,
+    HostBindingExtraDirective,
+    InputEPropertyBindingComponent,
+    InputEPropertyBindingDirective,
+    NgifNgelseComponent,
   ],
   imports: [
     BrowserModule,
